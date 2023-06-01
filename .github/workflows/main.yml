@@ -39,7 +39,7 @@ jobs:
 
       ## gradle build
       - name: Build with Gradle
-        run: ./gradlew build -x test
+        run: ./gradlew clean build -x test
 
       ## docker build & push to production
       - name: Docker build & push to prod
@@ -71,7 +71,7 @@ jobs:
           script: |
             pwd
             ls -al
-            cd actions-runner
+            cd ci_cd/actions-runner
             pwd
             if [[ "$(docker ps -q --filter ancestor=mysql:8.0)" ]]; then
               docker rm -f $(docker ps -qa --filter ancestor=mysql:8.0)
