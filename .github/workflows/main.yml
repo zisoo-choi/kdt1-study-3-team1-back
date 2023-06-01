@@ -85,7 +85,7 @@ jobs:
   
             echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
             
-            docker pull ghcr.io/zisoo-choi/kdt1-study-3-team1-back-server:latest
+            docker pull ghcr.io/zisoo-choi/kdt1-study-3-team1-back:latest
 
             docker image prune -f
             docker logout
