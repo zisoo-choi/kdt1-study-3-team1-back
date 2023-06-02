@@ -15,4 +15,6 @@ public class ProductRequestForm {
     public Product toProduct(){
         return new Product(productName, productPrice);
     }
+
+    
 }
